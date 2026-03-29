@@ -1,0 +1,45 @@
+grandsuperslam-shop/
+├── app/
+│   ├── admin/                  # Protected admin dashboard
+│   │   ├── layout.tsx
+│   │   ├── page.tsx            # CRUD products + fulfillment
+│   │   └── affiliates/page.tsx
+│   ├── api/
+│   │   ├── printify-webhook/route.ts
+│   │   ├── supplier-import/route.ts
+│   │   ├── affiliate-track/route.ts
+│   │   └── currency/route.ts   # Live USD→JPY/KRW
+│   ├── dashboard/
+│   │   └── page.tsx            # Customer order history + tracking
+│   ├── products/
+│   │   └── [slug]/
+│   │       └── page.tsx        # Dynamic localized product page
+│   ├── locale/
+│   │   └── [lang]/
+│   │       └── layout.tsx      # i18n middleware
+│   ├── layout.tsx              # Root layout + Tailwind + shadcn
+│   ├── page.tsx                # Premium homepage (see HTML below)
+│   └── globals.css
+├── components/
+│   ├── ui/                     # shadcn/ui components (button, card, etc.)
+│   ├── Navbar.tsx
+│   ├── LanguageSwitcher.tsx
+│   ├── ProductCard.tsx
+│   ├── HeroSection.tsx
+│   └── AffiliateBanner.tsx
+├── lib/
+│   ├── supabase.ts             # Backend brain client (see below)
+│   ├── printify.ts             # Printify SDK wrapper
+│   ├── suppliers.ts            # CSV/XML importer
+│   └── translations.ts         # DeepL cache
+├── public/
+│   ├── brand/                  # Canva-exported logos, mockups
+│   └── mockups/                # Region-specific images
+├── supabase/
+│   └── migrations/             # SQL schema (run once)
+├── .env.local                  # (free keys only)
+├── next.config.mjs
+├── tailwind.config.ts
+├── tsconfig.json
+├── package.json
+└── README.md                   # "Zero-dollar launch guide"
