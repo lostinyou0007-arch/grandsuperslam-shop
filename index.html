@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrandsuperSlam Shop • Grand Slam Lifestyle</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Impact:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Pretendard:wght@400;700&display=swap');
+    .hero-bg { background: linear-gradient(90deg, #0a1f3d 0%, #1e3a5f 100%); }
+    .baseball-stitch { background: repeating-linear-gradient(45deg, #d4af37, #d4af37 10px, #c19a2e 10px, #c19a2e 20px); }
+  </style>
+</head>
+<body class="bg-zinc-950 text-white font-sans">
+  <!-- Navbar -->
+  <nav class="border-b border-gold/30 bg-zinc-900/80 backdrop-blur-lg fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-baseball-ball text-3xl text-amber-400"></i>
+        <span class="text-3xl font-bold tracking-tighter">GRANDSUPERSLAM</span>
+      </div>
+      
+      <!-- Language Switcher -->
+      <div class="flex gap-2">
+        <button onclick="switchLang('en')" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-amber-400 hover:text-black transition-all">🇺🇸 EN</button>
+        <button onclick="switchLang('ja')" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-amber-400 hover:text-black transition-all">🇯🇵 JA</button>
+        <button onclick="switchLang('ko')" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-amber-400 hover:text-black transition-all">🇰🇷 KO</button>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-amber-400 transition">Shop</a>
+        <a href="#" class="hover:text-amber-400 transition">Stories</a>
+        <a href="#" class="hover:text-amber-400 transition">Affiliates</a>
+        <button class="bg-amber-400 text-black px-6 py-3 rounded-2xl font-bold flex items-center gap-2 hover:scale-105 transition">
+          <i class="fa-solid fa-shopping-bag"></i> Cart
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-7xl font-black leading-none tracking-tighter mb-6">
+          GRAND SLAM.<br>
+          <span class="text-amber-400">YOUR STYLE.</span>
+        </h1>
+        <p class="text-2xl text-zinc-400 mb-10">USA • Japan • Korea<br>One brand. Three premium baseball lifestyles.</p>
+        
+        <div class="flex gap-4">
+          <button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})" 
+                  class="bg-white text-black px-10 py-5 rounded-3xl text-xl font-bold flex items-center gap-3 hover:bg-amber-400 transition-all">
+            Shop Now <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button class="border border-amber-400 px-10 py-5 rounded-3xl text-xl font-bold flex items-center gap-3 hover:bg-white/10 transition-all">
+            Watch the Slam
+          </button>
+        </div>
+
+        <div class="mt-12 flex items-center gap-8 text-sm">
+          <div>🌍 3 Countries • 50+ Products</div>
+          <div class="flex items-center gap-2"><i class="fa-solid fa-truck text-amber-400"></i> Free shipping over $75</div>
+          <div>🔥 10% Affiliate Program</div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <img src="https://picsum.photos/id/1015/800/800" alt="Premium Baseball Jersey" class="rounded-3xl shadow-2xl border border-amber-400/30">
+        <div class="absolute -bottom-6 -left-6 bg-zinc-900 p-6 rounded-3xl shadow-xl border border-amber-400/30">
+          <p class="text-amber-400 text-sm">NOW TRENDING</p>
+          <p class="text-3xl font-bold">Personalized AOP Jersey</p>
+          <p class="text-5xl font-black text-amber-400">$74.99</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products (Premium Grid) -->
+  <section id="shop" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16">Grand Slam Collection</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <!-- Repeat 4 premium cards (example) -->
+        <div class="group bg-zinc-800 rounded-3xl overflow-hidden border border-transparent hover:border-amber-400 transition-all">
+          <img src="https://picsum.photos/id/201/400/400" class="w-full h-64 object-cover group-hover:scale-105 transition">
+          <div class="p-6">
+            <h3 class="font-bold text-xl">Personalized AOP Jersey</h3>
+            <p class="text-amber-400">$74.99 • 62% margin</p>
+            <button class="w-full mt-4 bg-amber-400 text-black py-4 rounded-2xl font-bold">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Add 3 more identical cards with different images/titles for demo -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12 border-t border-amber-400/20">
+    <div class="max-w-7xl mx-auto px-6 text-center text-zinc-500">
+      © 2026 GrandsuperSlam Shop • Zero-dollar • Premium dropshipping powered by free tech
+    </div>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      alert(`Switched to ${lang.toUpperCase()} – full Next.js i18n ready in repo`);
+      // In real Next.js this triggers middleware + Supabase translations
+    }
+    // Tailwind script already injected
+  </script>
+</body>
+</html>
